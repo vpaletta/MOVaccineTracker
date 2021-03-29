@@ -1,0 +1,156 @@
+/*
+    IS-241 
+    Spring 2021 
+    The A-Team's Missouri COVID-19 Vaccination Tracker 
+    Victor Paletta
+*/
+body {
+    max-width: 1350px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #000033;
+    background-color: #000033;
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    }
+#wrapper {
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    text-align: center;
+}
+footer {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #ffffff;
+    text-decoration: none;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: .75em;
+    border-bottom: none;
+    background: linear-gradient(#ffffff, #000033);
+} 
+.button {
+    background-color: #ffffff; 
+    color: #000033; 
+    border: 2px solid #000033;
+}
+.button:hover {
+    background-color: #000033;
+    color: #ffffff;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}    
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(#000033, #ffffff);
+}
+h2 {
+    text-align: center;
+}
+button {
+    background-color: #000033;
+    border: none;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button {
+    background-color: #000033;
+    border: none;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button {
+    background-color: #ffffff; 
+    color: #000033; 
+    border: 2px solid #000033;
+}
+button:hover {
+    background-color: #000033;
+    color: #ffffff;
+}
+input {
+    background-color: #ffffff; 
+    border: 2px solid #000033;
+}
+.button {
+    background-color: #ffffff; 
+    color: #000000; 
+    border: 2px solid #000033;
+}
+.button:hover {
+    background-color: #000033;
+    color: #ffffff;
+}
+.selected_button:hover {
+    background-color: #000033;
+    color: #ffffff;
+}
+.selected_button {
+    background-color: #000033;
+    border: none;
+    color: #ffffff;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.color {
+    color: #000033;
+}
+ table.patient-details {
+border-collapse: collapse;
+margin-left: auto;
+margin-right: auto;
+}
+table.patient-details td, table.patient-details th{
+padding: 6px;
+border: 1px solid #999;
+}
+#mv1 {
+    float: right;
+    max-width: 300px;
+}
+#mv2 {
+    float: right;
+    max-width: 300px;
+}
+#mv3 {
+    float: right;
+    max-width: 300px;
+}
+#mv4 {
+    max-width: 320px;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+
