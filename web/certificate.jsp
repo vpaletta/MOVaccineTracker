@@ -71,9 +71,15 @@
        </tr>
 </table><br>
        <nav>
-       <a href="next1.jsp" class="button">Back</a>
+       <div id="printPageButton">
+       <a href="next1.jsp" id="hide1" class="button">Back</a>
+       <div class="helptip">
+       <a href="https://vaers.hhs.gov/reportevent.html" target="blank" class="button">VAERS</a>
+       <span class="helptext">This link will take you to the Vaccine Adverse Event Reporting System web site.</span>
+       </div>
        <a class="button" onclick="window.print()">Print</a>
-       <a href="index.jsp" class="button">Log Out</a>
+       <a href="index.jsp" id="hide3" class="button">Log Out</a>
+       </div>
        </nav><br>
 </main>
 <footer>

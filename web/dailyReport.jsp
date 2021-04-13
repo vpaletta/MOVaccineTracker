@@ -23,6 +23,7 @@
     <br>
         ${msg} 
         <br><br>
+ <div id="printPageButton3">
 <form action="dailyReport" method="post">
     <label for="date">Enter Report Date:</label><br><br> 
         <input <input type="text" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" 
@@ -30,31 +31,35 @@
         <br><br>
         <input class="button" type="submit" value="Submit">
 </form><br>
+ </div>
 <h2>Daily Report Log</h2>
       <table class="patient-details">
           <tr>
-                <th>Quantity:</th>
+                <th>Facility:</th>
                 <th>Date:</th>
                 <th>Vaccine:</th>
                 <th>Dose:</th>
                 <th>Adverse Reaction:</th>
-                <th>Facility:</th>
+                <th>Quantity:</th>
             </tr>
                <c:forEach var="d" items="${dts}">
-                <tr>
-                    <td align="left">${d.number}</td>
+                <tr> 
+                    <td align="left">${d.facility}</td>
                     <td align="left">${d.admindate}</td>
                     <td align="left">${d.vaccine}</td>
                     <td align="left">${d.dose}</td>
                     <td align="left">${d.adversereact}</td>
-                    <td align="left">${d.facility}</td>
+                    <td align="left">${d.number}</td>
                 </tr>
             </c:forEach>  
         </table>
 </main><br><br>
 <nav>
+ <div id="printPageButton2">
  <a href="next1.jsp" class="button">Back</a>
- <a href="index.jsp" class="button">Log Out</a> 
+ <a class="button" onclick="window.print()">Print</a>
+ <a href="index.jsp" class="button">Log Out</a>
+ </div> 
 </nav><br>
 <footer>
    <img style="text-align: center; max-width: 150px" src="images/MO.gif" alt="Missouri">

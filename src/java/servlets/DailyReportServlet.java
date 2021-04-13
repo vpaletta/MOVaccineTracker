@@ -66,7 +66,7 @@ public class DailyReportServlet extends HttpServlet {
             URL = "/dailyReport.jsp";
        //Throw this error message if no data is added to the "dts" object.      
     if (dts.isEmpty()) {
-        msg+= "No record found.";
+        msg+= "No record found for the date entered.";
     }
      } catch (SQLException e) {
          msg ="Date error: " + e.getMessage();

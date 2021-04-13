@@ -293,7 +293,7 @@ public class PatientUpdateServlet extends HttpServlet {
                     ps.setString(10, p.getEmail()); 
                     ps.setString(11, p.getPhone()); 
                     ps.setString(12, p.getVaccine()); 
-                    ps.setString(13, p.getVaccineAdminSite()); 
+                    ps.setString(13, p.getVaccineAdminSite());
                     ps.setInt(14, p.getDose());
                     ps.setString(15, p.getAdmindate()); 
                     ps.setString(16, p.getAdversereact()); 

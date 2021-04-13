@@ -124,6 +124,7 @@ input {
 .color {
     color: #000033;
 }
+
  table.patient-details {
 border-collapse: collapse;
 margin-left: auto;
@@ -131,7 +132,7 @@ margin-right: auto;
 }
 table.patient-details td, table.patient-details th{
 padding: 6px;
-border: 1px solid #999;
+border: 1px solid #999999;
 }
 #mv1 {
     float: right;
@@ -146,9 +147,46 @@ border: 1px solid #999;
     max-width: 300px;
 }
 #mv4 {
-    max-width: 320px;
+    max-width: 300px;
     text-align: center;
     margin: auto;
+}
+@media print {
+  #printPageButton {
+    display: none;
+  }
+}
+@media print {
+  #printPageButton2 {
+    display: none;
+  }
+}
+@media print {
+  #printPageButton3 {
+    display: none;
+  }
+}
+.helptip {
+  position: relative;
+  display: inline-block;
+}
+
+.helptip .helptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: #999999;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -150px;
+  right: -20%;
+}
+.helptip:hover .helptext {
+  visibility: visible;
 }
 
 

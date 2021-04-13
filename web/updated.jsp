@@ -20,76 +20,99 @@
     <h1>Missouri COVID-19 Vaccination Tracker</h1>
 </header>
 <main>
-    <h2>Patient Updated</h2>
+    <h2>Patient Record</h2>
     ${formattedDate}
     <br><br>
 <form action="ViewCertificate" method="post">
-   <label>Vaccine Eligibility:</label>
-     <input type="text" id="vaccEligible" name="vaccEligible" value="${p.vaccEligible}" readonly="true">
-                <br><br>
-     <label>Patient ID:</label>
-     <input type="text" id="patientID" name="patientID" value="${p.patientID}" readonly="true">
-                <br><br>
-     <label>First Name:</label>
-     <input type="text" id="firstName" name="firstName" value="${p.firstName}" readonly="true">
-                <br><br>
-     <label>Middle Name:</label>
-     <input type="text" id="middleName" name="middleName" value="${p.middleName}" readonly="true">
-                <br><br>
-     <label>Last Name:</label>
-     <input type="text" id="lastName" name="lastName" value="${p.lastName}" readonly="true">
-                <br><br>
-     <label>DOB:</label>
-     <input type="text" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" title="yyyy-mm-dd"
-            id="DOB" name="DOB" value="${p.DOB}" readonly="true">
-                <br><br>
-     <label>Sex:</label>
-     <input type="text" id="sex" name="sex" value="${p.sex}" readonly="true">
-                <br><br>
-     <label>Race:</label>
-     <input type="text" id="race" name="race" value="${p.race}" readonly="true">
-                 <br><br>
-     <label>Facility:</label>
-     <input type="text" id="facility" name="facility" value="${p.facility}" size="3" readonly="true">
-               <br><br>
-     <label>City:</label>
-     <input type="text" id="city" name="city" value="${p.city}" readonly="true">
-               <br><br>
-     <label>State:</label>
-     <input type="text" id="state" name="state" value="${p.state}" readonly="true" size="3">
-               <br><br>
-     <label>Email:</label>
-     <input type="text" id="email" name="email" value="${p.email}"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Must be valid email." readonly="true">
-               <br><br>
-     <label>Phone:</label>
-     <input type="tel" id="phone" name="phone" value="${p.phone}"
-       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="###-###-####" readonly="true">
-                <br><br>
-     <label>Vaccine:</label>
-     <input type="text" id="vaccine" name="vaccine" value="${p.vaccine}" readonly="true">
-                <br><br>
-     <label>Vaccine Administration Site (on body):</label><br><br>
-     <input type="text" id="vaccineadminsite" name="vaccineadminsite" value="${p.vaccineAdminSite}" readonly="true">
-               <br><br>
-     <label>Dose:</label>
-     <input type="text" id="dose" name="dose" value="${p.dose}" readonly="true">
-               <br><br>
-    <label>Administration Date:</label>
-     <input type="text" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" title="yyyy-mm-dd"
-            id="admindate" name="admindate" value="${p.admindate}" readonly="true">
-               <br><br>
-    <label>Adverse Reaction:</label>
-    <input type="text" id="adversereact" name="adversereact" value="${p.adversereact}" size="3" readonly="true">
-                <br><br>
-    <input class="button" type="submit" value="View Certificate">
+    <table class="patient-details">
+    <tr>
+    <td>Vaccine Eligibility: </td>
+<td><input style="border: 2px solid #000033;" name="vaccEligible" value="${p.vaccEligible}" id="vaccEligible" required>
+</td></tr>
+    <tr>
+    <td>Patient ID #:</td>
+<td><input type="text" autocomplete="off" name="patientID" id="patientID" value="${p.patientID}" readonly="true" 
+       pattern="[aA-zZ0-9]{10}" title="ID # must be 10 digits." required></td></tr>
+    <tr>
+<td>First Name:</td>
+<td><input type="text" autocomplete="off" name="firstName" id="firstName" value="${p.firstName}" required></td></tr>
+
+   <tr>
+<td>Middle Name:</td>   
+<td><input type="text" autocomplete="off" name="middleName" id="middleName" value="${p.middleName}" required></td></tr>
+<tr>
+<td>Last Name:</td> 
+<td><input type="text" autocomplete="off" name="lastName" id="lastName" value="${p.lastName}" required></td></tr>
+<tr>
+<td>DOB:</td>                 
+<td><input type="text" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" title="yyyy-mm-dd" 
+       autocomplete="off" name="DOB" id="DOB" value="${p.DOB}" required></td></tr>
+<tr>
+<td>Sex:</td>  
+<td><input style="border: 2px solid #000033;" name="sex" id="sex" value="${p.sex}" required>
+</td></tr>
+<tr>
+<td>Race:</td>  
+<td><input style="border: 2px solid #000033;" name="race" id="race" value="${p.race}" required>
+</td></tr>
+<tr>
+<td>Facility:</td> 
+<td><input style="border: 2px solid #000033;" name="facility" id="facility" value="${p.facility}" required>
+</td></tr>
+<tr>
+<td>City: </td>                  
+<td><input type="text" autocomplete="off" name="city" id="city" value="${p.city}" required></td></tr>
+<tr>
+<td>State:</td>                   
+<td><input type="text" autocomplete="off" name="state" id="state" value="${p.state}" required></td></tr>
+<tr>
+<td>Email:</td>                  
+<td><input type="text" autocomplete="off" name="email" id="email" value="${p.email}" 
+       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Must be valid email." required></td></tr>
+<tr>
+<td>Phone #:</td>
+<td><input placeholder="xxx-xxx-xxxx" type="tel" autocomplete="off" value="${p.phone}" name="phone" id="phone" 
+  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="###-###-####" required></td></tr>
+<tr>
+<td>Vaccine:</td>
+<td><input style="border: 2px solid #000033;" name="vaccine" id="vaccine" value="${p.vaccine}" required>
+</td></tr>
+<tr>
+<td>Vaccine Administration Site (on body):</td> 
+<td><input style="border: 2px solid #000033;" name="vaccineadminsite" id="vaccineadminsite" value="${p.vaccineAdminSite}" required>
+</td></tr>
+<tr>
+<td>Dose:</td> 
+<td><input style="border: 2px solid #000033;" name="dose" id="dose" value="${p.dose}" required>
+</td></tr>
+<tr>
+<td>Administration Date:</td>                  
+<td><input type="text" placeholder="yyyy-mm-dd" autocomplete="off" name="admindate" id="admindate" 
+       <%--JSP expression tag <%= %> <%=df.format(new java.util.Date())%>--%>
+       value="${p.admindate}"  
+       pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" title="yyyy-mm-dd" size="20" required></td></tr>
+<tr>
+<td>Adverse Reaction:</td>
+<td><input style="border: 2px solid #000033;" name="adversereact" value="${p.adversereact}" id="adversereact" required>
+</td></tr>
+<tr>
+<td></td>
+<td><input class="button" type="submit" value="View Certificate" id="submit"></td></tr>
+</table>
 </form>
 </main>
 <nav>
   <a href="next1.jsp" class="button">Back</a>
   <a href="index.jsp" class="button">Log Out</a>
+  <button onclick="topFunction()" class="button" title="Go to top">Top</button>
 </nav><br>
 <footer>
+<script>
+  function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
    <img style="text-align: center; max-width: 150px" src="images/MO.gif" alt="Missouri">
    <p>&copy; 2021 The A-Team</p>
    <br> 
